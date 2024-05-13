@@ -21,5 +21,5 @@ void main()
 
 
     std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>> numbers { b1, b2, b3 };
-    std::cout << deniaSecondOperand(numbers) << std::endl;
+    std::cout << deniaImplication(numbers) << std::endl;
 }
