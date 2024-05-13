@@ -3,33 +3,8 @@
 C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\logsData.h(11,2): warning C4091: static : пропускается слева от "logs", когда ни одна переменная не объявлена
   (компиляция исходного файла "entyPoint.cpp")
   
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\numberData.h(8,44): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-  (компиляция исходного файла "entyPoint.cpp")
-  
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\numberData.h(8,32): warning C4244: инициализация: преобразование "double" в "const int", возможна потеря данных
-  (компиляция исходного файла "entyPoint.cpp")
-  
 C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\entyPoint.cpp(12,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
 C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\entyPoint.cpp(13,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   mathb.cpp
-  level.cpp
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\numberData.h(8,44): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-  (компиляция исходного файла "level.cpp")
-  
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\numberData.h(8,32): warning C4244: инициализация: преобразование "double" в "const int", возможна потеря данных
-  (компиляция исходного файла "level.cpp")
-  
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\level.cpp(17,21): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
-  logs.cpp
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\logsData.h(11,2): warning C4091: static : пропускается слева от "logs", когда ни одна переменная не объявлена
-  (компиляция исходного файла "logs.cpp")
-  
-  number.cpp
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\numberData.h(8,44): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-  (компиляция исходного файла "number.cpp")
-  
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\numberData.h(8,32): warning C4244: инициализация: преобразование "double" в "const int", возможна потеря данных
-  (компиляция исходного файла "number.cpp")
-  
   Создание кода...
   bi.vcxproj -> C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\x64\Debug\Calculator.exe

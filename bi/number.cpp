@@ -3,7 +3,7 @@
 numberData::numberData()
 {
     numberSystem = rnd(MIN_NUMBER_SYSTEM, MAX_NUMBER_SYSTEM);
-    numberDecimalSystem = rnd(0, MAX_BIT_DEPTH_NUMBER);
+    numberDecimalSystem = rnd(0, MAX_NUMBER_IN_DECIMAL_SYSTEM);
 
     if (numberSystem != 10)
         numberOriginalSystem = convertNumberInOriginalSystem(numberDecimalSystem, numberSystem);
@@ -24,20 +24,18 @@ int rnd(int minNumber, int maxNamber)
 {
     return minNumber + rand() % (maxNamber - minNumber + 1);
 }
-int convertNumberInBinSystem(int number, int initialNumberSystem)
+int convertBinaryToDecimal(std::bitset<MAX_BIT_DEPTH_NUMBER> bit_number)
 {
-    // ...
-    return 1;
+    return bit_number.to_ulong();
 }
-int convertNumberInDecimalSystem(int number, int initialNumberSystem)
+std::bitset<MAX_BIT_DEPTH_NUMBER> convertDecimalToBinary(int dec_number)
 {
-    // ...
-    return 1;
+    return std::bitset<MAX_BIT_DEPTH_NUMBER>(dec_number);
 }
 std::string convertNumberInOriginalSystem(int number, int originalNumberSystem)
 {
     std::string result = "";
-    int g = number;
+
     while (number > 0)
     {
         int remainder = number % originalNumberSystem;

@@ -15,6 +15,9 @@ void main()
 
     level firstLevel = level(MIN_COUNT_NUMBERS_ANY_LEVEL, MAX_COUNT_NUMBERS_FIRST_LEVEL);
 
-    std::vector<int> numbers{ 10, 20, 30, 40 };
-    std::cout << conjunction(numbers) << std::endl;
+    auto b1 = convertDecimalToBinary(13);
+    auto b2 = convertDecimalToBinary(6);
+
+    std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>> numbers { b1, b2 };
+    std::cout << deniaReverseImplication(numbers) << std::endl;
 }
