@@ -32,7 +32,7 @@ std::bitset<MAX_BIT_DEPTH_NUMBER> conjunction(std::vector<std::bitset<MAX_BIT_DE
     return result;
 }
 
-std::bitset<MAX_BIT_DEPTH_NUMBER> XOR(std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>> dataBits)
+std::bitset<MAX_BIT_DEPTH_NUMBER> additionModuloTwo(std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>> dataBits)
 {
     std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>>::iterator iterator { dataBits.begin() };
 
@@ -128,7 +128,21 @@ std::bitset<MAX_BIT_DEPTH_NUMBER> deniaImplication(std::vector<std::bitset<MAX_B
     return result;
 }
 
-// ...
+std::bitset<MAX_BIT_DEPTH_NUMBER> denialFirstOperand(std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>> dataBits)
+{
+    return ~dataBits[0];
+}
+
+std::bitset<MAX_BIT_DEPTH_NUMBER> firstOperand(std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>> dataBits)
+{
+    return dataBits[0];
+}
+
+std::bitset<MAX_BIT_DEPTH_NUMBER> secondOperand(std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>> dataBits)
+{
+    return dataBits.back();
+}
+
 
 std::bitset<MAX_BIT_DEPTH_NUMBER> reverseImplication(std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>> dataBits)
 {
@@ -160,4 +174,9 @@ std::bitset<MAX_BIT_DEPTH_NUMBER> deniaReverseImplication(std::vector<std::bitse
     }
 
     return result;
+}
+
+std::bitset<MAX_BIT_DEPTH_NUMBER> deniaSecondOperand(std::vector<std::bitset<MAX_BIT_DEPTH_NUMBER>> dataBits)
+{
+    return ~dataBits.back();
 }
