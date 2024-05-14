@@ -9,14 +9,35 @@ numberData::numberData()
         numberOriginalSystem = convertNumberInOriginalSystem(numberDecimalSystem, numberSystem);
     else
         numberOriginalSystem = numberDecimalSystem;
+
+    numberBinarySystem = convertDecimalToBinary(numberDecimalSystem);
 }
-int numberData::getNumberDecimalSystem()
+numberData::numberData(int numberSystem, std::bitset<MAX_BIT_DEPTH_NUMBER> numberBinSystem)
+{
+    numberData::numberSystem = numberSystem;
+    numberBinarySystem = numberBinSystem;
+    numberDecimalSystem = convertBinaryToDecimal(numberBinSystem);
+
+    if (numberData::numberSystem != 2)
+        numberOriginalSystem = convertNumberInOriginalSystem(numberDecimalSystem, numberSystem);
+    else
+        numberOriginalSystem = numberBinSystem.to_string();
+}
+int numberData::getNumberSystem()
 {
     return numberSystem;
+}
+std::bitset<MAX_BIT_DEPTH_NUMBER> numberData::getNumberBinarySystem()
+{
+    return numberBinarySystem;
 }
 std::string numberData::getNamberOriginalSystem()
 {
     return numberOriginalSystem;
+}
+int numberData::getNumberDecimalSystem()
+{
+    return numberDecimalSystem;
 }
 
 

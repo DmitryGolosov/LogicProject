@@ -19,6 +19,12 @@
     <Filter Include="Исходные файлы\Functions">
       <UniqueIdentifier>{29567914-dc3b-4cf8-8133-82dcbf570862}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Functions">
+      <UniqueIdentifier>{3af7ac77-1564-4790-9e9f-5380a93eacd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\TypeData">
+      <UniqueIdentifier>{ba8c69af-1e3b-4544-af95-e3e18233ce0a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entyPoint.cpp">
@@ -38,20 +44,23 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mathb.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="logsData.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="numberData.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="constant.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="functionMap.h">
+      <Filter>Файлы заголовков\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="mathb.h">
+      <Filter>Файлы заголовков\Functions</Filter>
+    </ClInclude>
     <ClInclude Include="levelData.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\TypeData</Filter>
+    </ClInclude>
+    <ClInclude Include="logsData.h">
+      <Filter>Файлы заголовков\TypeData</Filter>
+    </ClInclude>
+    <ClInclude Include="numberData.h">
+      <Filter>Файлы заголовков\TypeData</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,11 +1,11 @@
 #include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <ctime>
+#include <chrono>
+
+#include "levelData.h"
 
 #pragma once
-static class logs
-{
-public:
-	void recordFirstIteration();
-	void recordSubsequentIteration();
-private:
-	std::string nameFile = "logs.txt";
-};
+void recordFirstIteration(firstLevel level, int countLevels);
+void recordSubsequentIteration(otherLevel level);

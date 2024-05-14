@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constant.h" />
+    <ClInclude Include="functionMap.h" />
     <ClInclude Include="mathb.h" />
     <ClInclude Include="levelData.h" />
     <ClInclude Include="logsData.h" />

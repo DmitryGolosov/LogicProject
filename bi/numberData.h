@@ -10,12 +10,16 @@ class numberData
 {
 public:
     numberData();
-    int getNumberDecimalSystem();
+    numberData(int numberSystem, std::bitset<MAX_BIT_DEPTH_NUMBER> numberBinarySystem);
+    int getNumberSystem();
+    std::bitset<MAX_BIT_DEPTH_NUMBER> getNumberBinarySystem();
     std::string getNamberOriginalSystem();
+    int getNumberDecimalSystem();
 private:
     int numberSystem;
-    int numberDecimalSystem;
+    std::bitset<MAX_BIT_DEPTH_NUMBER> numberBinarySystem;
     std::string numberOriginalSystem;
+    int numberDecimalSystem;
 };
 
 
