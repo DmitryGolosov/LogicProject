@@ -5,7 +5,7 @@ const int MIN_COUNT_NUMBERS_AT_FUNCTIONS = 1; // Минимальное число параметров в 
 
 // Константы для генерации уровней
 const int MIN_COUNT_LEVELS = 2; // Миниманльное число уровней
-const int MAX_COUNT_LEVELS = 2; // Максимальное число уровней
+const int MAX_COUNT_LEVELS = 10; // Максимальное число уровней
 
 // Константы для генерации уровня
 const int MIN_COUNT_NUMBERS_ANY_LEVEL = 1; // Минимальное число переменных на уровне

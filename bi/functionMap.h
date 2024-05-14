@@ -19,12 +19,12 @@ static functionPointer functions[COUNT_FUNCTIONS] = {
 
 static std::map<functionPointer, std::string> functionNameMap
 {
-    {disjunction, "disjunction"}, {conjunction, "conjunction"}, {additionModuloTwo, "additionModuloTwo"},
-    {identicallyEqual, "identicallyEqual"}, {implication, "implication"}, {arrowPier, "arrowPier"},
-    {strokeSchaeffer, "strokeSchaeffer"}, {deniaImplication, "deniaImplication"},
-    {denialFirstOperand, "denialFirstOperand"}, {firstOperand, "firstOperand"}, {secondOperand, "secondOperand"},
+    {disjunction, "OR"}, {conjunction, "AND"}, {additionModuloTwo, "XOR"},
+    {identicallyEqual, "=="}, {implication, "->"}, {arrowPier, "V"},
+    {strokeSchaeffer, "|"}, {deniaImplication, "~->"},
+    {denialFirstOperand, "~x"}, {firstOperand, "x"}, {secondOperand, "y"},
     
-    {reverseImplication, "reverseImplication"}, {deniaReverseImplication, "deniaReverseImplication"},
+    {reverseImplication, "<-"}, {deniaReverseImplication, "~<-"},
 
-    {deniaSecondOperand, "deniaSecondOperand"}
+    {deniaSecondOperand, "~y"}
 };

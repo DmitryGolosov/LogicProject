@@ -5,11 +5,7 @@ numberData::numberData()
     numberSystem = rnd(MIN_NUMBER_SYSTEM, MAX_NUMBER_SYSTEM);
     numberDecimalSystem = rnd(0, MAX_NUMBER_IN_DECIMAL_SYSTEM);
 
-    if (numberSystem != 10)
-        numberOriginalSystem = convertNumberInOriginalSystem(numberDecimalSystem, numberSystem);
-    else
-        numberOriginalSystem = numberDecimalSystem;
-
+    numberOriginalSystem = convertNumberInOriginalSystem(numberDecimalSystem, numberSystem);
     numberBinarySystem = convertDecimalToBinary(numberDecimalSystem);
 }
 numberData::numberData(int numberSystem, std::bitset<MAX_BIT_DEPTH_NUMBER> numberBinSystem)
@@ -56,6 +52,9 @@ std::bitset<MAX_BIT_DEPTH_NUMBER> convertDecimalToBinary(int dec_number)
 std::string convertNumberInOriginalSystem(int number, int originalNumberSystem)
 {
     std::string result = "";
+
+    if (number == 0)
+        return "0";
 
     while (number > 0)
     {

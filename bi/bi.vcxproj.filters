@@ -42,6 +42,9 @@
     <ClCompile Include="mathb.cpp">
       <Filter>Исходные файлы\Functions</Filter>
     </ClCompile>
+    <ClCompile Include="operation.cpp">
+      <Filter>Исходные файлы\TypeData</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constant.h">
@@ -61,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="numberData.h">
       <Filter>Файлы заголовков\TypeData</Filter>
+    </ClInclude>
+    <ClInclude Include="operation.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

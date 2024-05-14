@@ -133,6 +133,7 @@
     <ClCompile Include="level.cpp" />
     <ClCompile Include="logs.cpp" />
     <ClCompile Include="number.cpp" />
+    <ClCompile Include="operation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constant.h" />
@@ -141,6 +142,7 @@
     <ClInclude Include="levelData.h" />
     <ClInclude Include="logsData.h" />
     <ClInclude Include="numberData.h" />
+    <ClInclude Include="operation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

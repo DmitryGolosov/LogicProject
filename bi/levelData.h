@@ -2,9 +2,10 @@
 #include <vector>
 #include <random>
 
-#include "numberData.h"
 #include "mathb.h"
 #include "functionMap.h"
+#include "numberData.h"
+#include "operation.h"
 
 #pragma once
 class level
@@ -30,6 +31,9 @@ class otherLevel : public level
 {
 public:
     otherLevel(int minCountNumbers, int maxCountNumbers, level previousLevel);
+    std::vector<operation> getCopyOperation();
+    std::vector<numberData> getCopyPreviousData();
 private:
-    int numberLevel;
+    std::vector<numberData> previousData;
+    std::vector<operation> operations;
 };

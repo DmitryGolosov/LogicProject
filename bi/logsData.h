@@ -9,3 +9,4 @@
 #pragma once
 void recordFirstIteration(firstLevel level, int countLevels);
 void recordSubsequentIteration(otherLevel level);
+void endRecording();
