@@ -1,118 +1,133 @@
 ======================================================================
-ALGORITHM OF BITWISE FUNCTIONS WITH TWO VARIABLES, 2024-05-14 23:12:56
+USER NAME: Azeev Boris; COUNT EXANPLES: 2, 2024-05-15 20:25:13
 ======================================================================
-Count levels: 10. Elements zero level (1):
+
+======================================================================
+ALGORITHM OF BITWISE FUNCTIONS WITH TWO VARIABLES
+======================================================================
+Count levels: 4. Elements zero level (5):
 
 Index	System	Orig	Binary	Decimal
-0	8	12	1010	10
+0	6	15	1011	11
+1	5	30	1111	15
+2	7	12	1001	9
+3	2	111	0111	7
+4	8	2	0010	2
 
-Current level: 1. Generation functions (6):
+Current level: 1. Generation functions (2):
 
-func	f0	f1	f2	f3	f4	f5	
-oper	~x	->	<-	~x	XOR	y	
-system	7	6	4	2	8	7	
-
-Operations for calculations:
-Operation: ~x, system: 7, numbers-system: 12-8, result: 5-7, 0101-2
-Operation: ->, system: 6, numbers-system: 12-8, result: 14-6, 1010-2
-Operation: <-, system: 4, numbers-system: 12-8, result: 22-4, 1010-2
-Operation: ~x, system: 2, numbers-system: 12-8, result: 0101-2, 0101-2
-Operation: XOR, system: 8, numbers-system: 12-8, result: 12-8, 1010-2
-Operation: y, system: 7, numbers-system: 12-8, result: 13-7, 1010-2
-
-Current level: 2. Generation functions (6):
-
-func	f0	f1	f2	f3	f4	f5	
-oper	|	|	~<-	~<-	V	==	
-system	4	7	6	10	7	9	
+func	f0	f1	
+oper	XOR	|	
+system	8	8	
 
 Operations for calculations:
-Operation: |, system: 4, numbers-system: 14-6, 0-5, 0101-2, result: 22-4, 1010-2
-Operation: |, system: 7, numbers-system: 13-7, result: 13-7, 1010-2
-Operation: ~<-, system: 6, numbers-system: 22-4, result: 14-6, 1010-2
-Operation: ~<-, system: 10, numbers-system: 0-5, 0101-2, 22-4, 12-8, 13-7, result: 10-10, 1010-2
-Operation: V, system: 7, numbers-system: 14-6, 5-7, result: 0-7, 0000-2
-Operation: ==, system: 9, numbers-system: 14-6, 22-4, 5-7, result: 5-9, 0101-2
+Operation: XOR, system: 8, numbers-system: 111-2, 15-6, 30-5, result: 3-8, 0011-2
+Operation: |, system: 8, numbers-system: 30-5, result: 17-8, 1111-2
+
+Current level: 2. Generation functions (2):
+
+func	f0	f1	
+oper	XOR	|	
+system	9	7	
+
+Operations for calculations:
+Operation: XOR, system: 9, numbers-system: 3-8, result: 3-9, 0011-2
+Operation: |, system: 7, numbers-system: 3-8, 17-8, result: 15-7, 1100-2
 
 Current level: 3. Generation functions (2):
 
 func	f0	f1	
-oper	V	x	
-system	3	2	
+oper	~y	y	
+system	2	5	
 
 Operations for calculations:
-Operation: V, system: 3, numbers-system: 5-9, 120-3, 14-6, 1-8, 22-4, 0-7, 21-6, 10-10, 13-7, result: 0-3, 0000-2
-Operation: x, system: 2, numbers-system: 120-3, 1-8, 13-7, 0-7, 21-6, 22-4, result: 1111-2, 1111-2
+Operation: ~y, system: 2, numbers-system: 3-9, result: 1100-2, 1100-2
+Operation: y, system: 5, numbers-system: 15-7, result: 22-5, 1100-2
+======================================================================
+User responses: 1100 22 
+======================================================================
+======================================================================
+ALGORITHM OF BITWISE FUNCTIONS WITH TWO VARIABLES
+======================================================================
+Count levels: 7. Elements zero level (5):
+
+Index	System	Orig	Binary	Decimal
+0	8	5	0101	5
+1	2	1010	1010	10
+2	10	8	1000	8
+3	9	5	0101	5
+4	8	15	1101	13
+
+Current level: 1. Generation functions (3):
+
+func	f0	f1	f2	
+oper	<-	V	~->	
+system	9	8	4	
+
+Operations for calculations:
+Operation: <-, system: 9, numbers-system: 15-8, 8-10, 5-9, 5-8, result: 16-9, 1111-2
+Operation: V, system: 8, numbers-system: 8-10, result: 10-8, 1000-2
+Operation: ~->, system: 4, numbers-system: 5-9, result: 11-4, 0101-2
+
+Current level: 2. Generation functions (6):
+
+func	f0	f1	f2	f3	f4	f5	
+oper	~x	OR	==	<-	|	~->	
+system	2	7	8	5	8	9	
+
+Operations for calculations:
+Operation: ~x, system: 2, numbers-system: 11-4, result: 1010-2, 1010-2
+Operation: OR, system: 7, numbers-system: 11-4, 16-9, result: 21-7, 1111-2
+Operation: ==, system: 8, numbers-system: 11-4, 16-9, result: 5-8, 0101-2
+Operation: <-, system: 5, numbers-system: 16-9, 10-8, 11-4, result: 30-5, 1111-2
+Operation: |, system: 8, numbers-system: 10-8, 16-9, result: 7-8, 0111-2
+Operation: ~->, system: 9, numbers-system: 11-4, 16-9, 10-8, result: 0-9, 0000-2
+
+Current level: 3. Generation functions (2):
+
+func	f0	f1	
+oper	V	|	
+system	5	7	
+
+Operations for calculations:
+Operation: V, system: 5, numbers-system: 21-7, 30-5, 7-8, result: 13-5, 1000-2
+Operation: |, system: 7, numbers-system: 5-8, 30-5, 21-7, result: 5-7, 0101-2
 
 Current level: 4. Generation functions (4):
 
 func	f0	f1	f2	f3	
-oper	AND	~<-	~<-	|	
-system	7	8	6	6	
+oper	~x	~x	XOR	AND	
+system	4	2	10	9	
 
 Operations for calculations:
-Operation: AND, system: 7, numbers-system: 13-6, 0-3, 20-4, result: 0-7, 0000-2
-Operation: ~<-, system: 8, numbers-system: 0-3, 2-7, 1111-2, result: 15-8, 1101-2
-Operation: ~<-, system: 6, numbers-system: 2-7, 0-3, 20-7, 13-6, result: 1-6, 0001-2
-Operation: |, system: 6, numbers-system: 13-6, 2-7, 1111-2, 23-4, 20-4, result: 11-6, 0111-2
+Operation: ~x, system: 4, numbers-system: 13-5, 5-7, result: 13-4, 0111-2
+Operation: ~x, system: 2, numbers-system: 13-5, result: 0111-2, 0111-2
+Operation: XOR, system: 10, numbers-system: 5-7, 13-5, result: 13-10, 1101-2
+Operation: AND, system: 9, numbers-system: 13-5, 5-7, result: 0-9, 0000-2
 
-Current level: 5. Generation functions (5):
+Current level: 5. Generation functions (3):
 
-func	f0	f1	f2	f3	f4	
-oper	y	~x	|	|	->	
-system	4	7	4	3	5	
-
-Operations for calculations:
-Operation: y, system: 4, numbers-system: 15-8, 0-7, 11-6, result: 13-4, 0111-2
-Operation: ~x, system: 7, numbers-system: 13-5, 15-8, 1-6, 0-7, result: 10-7, 0111-2
-Operation: |, system: 4, numbers-system: 1-6, 13-5, result: 33-4, 1111-2
-Operation: |, system: 3, numbers-system: 11-6, 1-6, 15-8, result: 10-3, 0011-2
-Operation: ->, system: 5, numbers-system: 1-6, 15-8, 11-6, 0-7, 13-5, result: 30-5, 1111-2
-
-Current level: 6. Generation functions (4):
-
-func	f0	f1	f2	f3	
-oper	<-	y	<-	OR	
-system	8	3	3	9	
+func	f0	f1	f2	
+oper	==	~y	==	
+system	4	9	4	
 
 Operations for calculations:
-Operation: <-, system: 8, numbers-system: 13-4, 13-6, 33-4, 10-3, 10-7, 10-5, 30-5, result: 17-8, 1111-2
-Operation: y, system: 3, numbers-system: 33-4, 30-5, 15-7, 10-7, 13-4, result: 21-3, 0111-2
-Operation: <-, system: 3, numbers-system: 13-6, 10-3, result: 111-3, 1101-2
-Operation: OR, system: 9, numbers-system: 33-4, 13-6, 10-7, 10-3, 30-5, 15-7, 13-4, 10-5, result: 16-9, 1111-2
+Operation: ==, system: 4, numbers-system: 13-10, 0-9, 0111-2, 13-4, result: 2-4, 0010-2
+Operation: ~y, system: 9, numbers-system: 0111-2, result: 8-9, 1000-2
+Operation: ==, system: 4, numbers-system: 13-10, 13-4, 0111-2, result: 31-4, 1101-2
 
-Current level: 7. Generation functions (6):
-
-func	f0	f1	f2	f3	f4	f5	
-oper	->	x	~x	V	y	->	
-system	6	7	5	8	5	5	
-
-Operations for calculations:
-Operation: ->, system: 6, numbers-system: 11-5, 16-9, 17-8, 111-3, result: 21-6, 1101-2
-Operation: x, system: 7, numbers-system: 16-9, 111-3, 17-8, 21-3, result: 21-7, 1111-2
-Operation: ~x, system: 5, numbers-system: 11-5, result: 14-5, 1001-2
-Operation: V, system: 8, numbers-system: 11-5, 111-3, 21-3, 17-8, 16-9, result: 0-8, 0000-2
-Operation: y, system: 5, numbers-system: 111-3, 17-8, 21-3, result: 12-5, 0111-2
-Operation: ->, system: 5, numbers-system: 17-8, 111-3, 16-9, 11-5, 21-3, result: 30-5, 1111-2
-
-Current level: 8. Generation functions (1):
+Current level: 6. Generation functions (1):
 
 func	f0	
-oper	~<-	
+oper	y	
 system	9	
 
 Operations for calculations:
-Operation: ~<-, system: 9, numbers-system: 21-6, 3-4, 11-8, result: 10-9, 1001-2
-
-Current level: 9. Generation functions (1):
-
-func	f0	
-oper	<-	
-system	4	
-
-Operations for calculations:
-Operation: <-, system: 4, numbers-system: 111-3, 0-6, result: 33-4, 1111-2
+Operation: y, system: 9, numbers-system: 31-4, 8-9, 2-4, result: 2-9, 0010-2
 ======================================================================
+User responses: The number of outputs was calculated incorrectly 
+======================================================================
+You answered 1/2 of the questions correctly.
 
 
 

@@ -1,5 +1,6 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (bi.vcxproj).  Это может привести к ошибкам очистки и перестроения.
-  logs.cpp
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\logs.cpp(41,12): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\logs.cpp(60,16): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  entyPoint.cpp
+C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\entyPoint.cpp(61,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\entyPoint.cpp(62,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\bi\entyPoint.cpp(78,33): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   bi.vcxproj -> C:\Users\azeev\OneDrive\Рабочий стол\LogicProject\x64\Debug\Calculator.exe

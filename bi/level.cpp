@@ -1,13 +1,21 @@
 #include "levelData.h"
 
+level::level() {}
+
 level::level(int minCountNumbers, int maxCountNumbers)
 {
     int countNumbersAtLevel = rnd(minCountNumbers, maxCountNumbers);
 
+    std::cout << "\nIndex\tSystem\tOrig\tBinary\tDecimal" << std::endl;
+
     for (int i = 0; i < countNumbersAtLevel; i++)
     {
         data.push_back(numberData());
+        std::cout << i << "\t" << data[i].getNumberSystem() << "\t" << data[i].getNamberOriginalSystem() << "\t"
+            << data[i].getNumberBinarySystem() << "\t" << data[i].getNumberDecimalSystem() << std::endl;
     }
+
+    std::cout << std::endl;
 }
 
 int level::countNumbers()
@@ -35,10 +43,13 @@ firstLevel::firstLevel(int minCountNumbers, int maxCountNumbers) : level(minCoun
 { };
 
 
-otherLevel::otherLevel(int minCountNumbers, int maxCountNumbers, level lastLevel) : level(minCountNumbers, maxCountNumbers)
+otherLevel::otherLevel(int minCountNumbers, int maxCountNumbers, level lastLevel) : level()
 {
     previousData = lastLevel.getCopyData();
     numberLevel = lastLevel.getNumberLevel() + 1;
+
+    std::cout << "Level " << numberLevel << ":" << std::endl;
+
     int countNumbersAtLevel = rnd(minCountNumbers, maxCountNumbers);
 
     for (int i = 0; i < countNumbersAtLevel; i++)
@@ -54,14 +65,20 @@ otherLevel::otherLevel(int minCountNumbers, int maxCountNumbers, level lastLevel
         std::vector<numberData> previousDats = lastLevel.getCopyData();
         std::shuffle(std::begin(previousDats), std::end(previousDats), g);
 
+        functionPointer selectedFunction = functions[function];
+        std::cout << "Operation " << functionNameMap[selectedFunction] << ". Number to calculate (number/system): ";
+
         std::vector<numberData> numbers;
         for (int i = 0; i < countNumbersAtFunction; i++)
         {
             numbersBinarySystem.push_back(previousDats[i].getNumberBinarySystem());
             numbers.push_back(previousDats[i]);
+
+            std::cout << previousDats[i].getNamberOriginalSystem() << "-" << previousDats[i].getNumberSystem() << " ";
         }
 
-        functionPointer selectedFunction = functions[function];
+        std::cout << "\nThe answer is in the number system: " << numberSystem << "\n" << std::endl;
+
         std::bitset<MAX_BIT_DEPTH_NUMBER> numberBinarySystem = selectedFunction(numbersBinarySystem);
         numberData result = numberData(numberSystem, numberBinarySystem);
         

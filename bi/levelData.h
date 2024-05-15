@@ -11,6 +11,7 @@
 class level
 {
 public:
+    level();
     level(int minCountNumbers, int maxCountNumbers);
     int countNumbers();
     int getNumberLevel();
