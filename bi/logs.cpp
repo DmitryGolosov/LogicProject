@@ -1,18 +1,20 @@
 #include "logsData.h"
 
-const std::string prNameFile = "logs.txt";
+const std::string nameFile = "logs.txt";
 const std::string printStarting (70, '=');
 
 void recordFirstIteration(firstLevel level, int countLevels)
 {
-	std::ofstream file(prNameFile, std::ios::app);
+	std::ofstream file(nameFile, std::ios::app);
 
 	if (file.is_open())
 	{
 		int size = level.countNumbers();
+		std::time_t const now_c = std::time(nullptr);
 
 		file << printStarting << std::endl;
-		file << "ALGORITHM OF BITWISE FUNCTIONS WITH TWO VARIABLES" << std::endl;
+		#pragma warning(suppress : 4996)
+		file << "ALGORITHM OF BITWISE FUNCTIONS WITH TWO VARIABLES, " << std::put_time(std::localtime(&now_c), "%F %T") << std::endl;
 		file << printStarting << std::endl;
 
 		file << "Count levels: " << countLevels << ". Elements zero level (" << size << "):" << std::endl;
@@ -31,7 +33,7 @@ void recordFirstIteration(firstLevel level, int countLevels)
 
 void recordSubsequentIteration(otherLevel currentlevel)
 {
-	std::ofstream file(prNameFile, std::ios::app);
+	std::ofstream file(nameFile, std::ios::app);
 
 	if (file.is_open())
 	{
@@ -79,56 +81,10 @@ void recordSubsequentIteration(otherLevel currentlevel)
 
 void endRecording()
 {
-	std::ofstream file(prNameFile, std::ios::app);
+	std::ofstream file(nameFile, std::ios::app);
 
 	if (file.is_open())
-		file << printStarting << std::endl;
-
-	file.close();
-}
-
-void prStartingLogs(std::string name, int countIteration)
-{
-	std::ofstream file(prNameFile, std::ios::app);
-
-	if (file.is_open())
-	{
-		std::time_t const now_c = std::time(nullptr);
-
-		file << printStarting << std::endl;
-		#pragma warning(suppress : 4996)
-		file << "USER NAME: " << name << "; COUNT EXANPLES: " << countIteration << ", " << std::put_time(std::localtime(&now_c), "%F %T") << std::endl;
-		file << printStarting << "\n" << std::endl;
-	}
-
-	file.close();
-}
-
-void prExamplesLogs(std::vector<std::string> usreResponses)
-{
-	std::ofstream file(prNameFile, std::ios::app);
-
-	if (file.is_open())
-	{
-		file << "User responses: ";
-		
-		int size = usreResponses.size();
-		for (int i = 0; i < size; i++)
-			file << usreResponses[i] << " ";
-		file << "\n" << printStarting << std::endl;
-	}
-
-	file.close();
-}
-
-void prEndingLogs(int countExamples, int countUserCorrectAnswers)
-{
-	std::ofstream file(prNameFile, std::ios::app);
-
-	if (file.is_open())
-	{
-		file << "You answered " << countUserCorrectAnswers << "/" << countExamples << " of the questions correctly." << "\n\n\n\n" << std::endl;
-	}
+		file << printStarting << "\n\n\n\n" << std::endl;
 
 	file.close();
 }
